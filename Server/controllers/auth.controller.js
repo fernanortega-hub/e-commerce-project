@@ -8,6 +8,7 @@ exports.register = async (req = express.request, res = express.response) => {
         const errors = expressValidator.validationResult(req);
 
         if (!errors.isEmpty())
+        console.log(errors)
             return res.status(400).json({ errors: errors.array });
 
         // const body = req.body; // Se puede hacer así
