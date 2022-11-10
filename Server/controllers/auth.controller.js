@@ -61,7 +61,7 @@ exports.login = async (req = express.request, res = express.response) => {
             return res.status(404).json({ message: 'User not found' });
 
         if (!bcrypt.compareSync(password, user.password)) {
-            return res.status(400).json({ message: 'Wrong credentials' });
+            return res.status(400).json({ message: 'your credentials are not memo' });
         }
 
         return res.status(200).json({ user })
